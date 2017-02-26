@@ -5,3 +5,5 @@ d_lab_env
 /static 
 .DS_Store 
 *.idea 
+db.sqlite3 
+*db.sqlite3
