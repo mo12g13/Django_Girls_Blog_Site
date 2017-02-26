@@ -4,7 +4,7 @@ from django.utils import timezone
 from django.template.response import TemplateResponse
 
 # Create your views here.
-
+# This is the view that display the data in the  html form
 
 def post_list(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
