@@ -1,25 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Momo's Blog</title>
 
-</head>
-<body>
-<div>
-    <h1><a href="#">Momo's Blog</a></h1>
-</div>
-<div>
-    <p>Publish: 02/12/2017</p>
-    <h2><a href="#">My first Post</a></h2>
-    <p>Hello I realized the way to living a healthy life is to exercise vigorously and eat healthy.</p>
-</div>
+<div><h1><a href="#">Momo's Blog</a></h1></div>
 
-<div>
-    <h2><a href="#">My Second Post</a> </h2>
-    <p>Publish: 04/23/2012</p>
-    <p>Just to follow-up my initial statement, life is never complete living it alone.</p>
-</div>
 
-</body>
-</html>
+{% for post in posts %}
+    <div>
+
+        <h1><a href="#">{{post.title}}</a></h1>
+        <p>{{post.text|linebreaksbr}}</p>
+          <p>published: {{post.published_date}}</p>
+    </div>
+{% endfor %}
+
